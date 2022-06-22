@@ -7,7 +7,15 @@ from cdk_student04_multi_region_app.cdk_student04_multi_region_app_stack import 
 
 
 app = cdk.App()
-CdkStudent04MultiRegionAppStack(app, "CdkStudent04MultiRegionAppStack",
+
+student_name = 'student04'
+regions = ['eu-west-1', 'eu-central-1']
+
+for region in regions:
+    CdkStudent04MultiRegionAppStack(app, student_name+"-"+region+"-stack",
+    env=cdk.Environment(account='179787945443', region=region),
+    owner=student_name
+
     # If you don't specify 'env', this stack will be environment-agnostic.
     # Account/Region-dependent features and context lookups will not work,
     # but a single synthesized template can be deployed anywhere.

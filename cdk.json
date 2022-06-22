@@ -14,7 +14,10 @@
       "tests"
     ]
   },
+  "requireApproval": "never",
+  "toolkitStackName": "CDKToolkitStudent04",
   "context": {
+    "@aws-cdk/core:bootstrapQualifier": "student04",
     "@aws-cdk/aws-apigateway:usagePlanKeyOrderInsensitiveId": true,
     "@aws-cdk/core:stackRelativeExports": true,
     "@aws-cdk/aws-rds:lowercaseDbIdentifier": true,
