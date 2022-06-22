@@ -8,7 +8,7 @@ from constructs import Construct
 
 class CdkStudent04MultiRegionAppStack(Stack):
 
-    def __init__(self, scope: Construct, construct_id: str, owner='student04', **kwargs) -> None:
+    def __init__(self, scope: Construct, construct_id: str, owner :str, **kwargs) -> None:
         super().__init__(scope, construct_id, **kwargs)
         
         my_vpc = ec2.Vpc(self, owner+'-vpc',
